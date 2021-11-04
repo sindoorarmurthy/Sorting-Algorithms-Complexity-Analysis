@@ -1,0 +1,93 @@
+{% extends "newbase.html" %}
+
+{% block samecontent %}Select Algorithm{% endblock %}
+
+{% block pageContent %}
+
+    <div class="container">
+      <div style="position:relative; right:80px;">
+        <img class ="blurImage" src = "../static/images/bg_select.jpeg" style="width:150%;height:50%;">
+      </div>
+      <div class="container-text">
+        <h2>SELECT ALGORITHM & NO. OF EXPERIMENTS</h2>
+
+        <form action="/selectAlgorithm" method="post">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="algorithm" value="bubble_sort">
+                <label class="form-check-label">
+                  BUBBLE SORT 
+                </label>
+                
+              </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="algorithm" value="insertion_sort" >
+                <label class="form-check-label">
+                  INSERTION SORT
+                </label>
+                
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  name="algorithm" value="selection_sort">
+                <label class="form-check-label">
+                 SELECTION SORT
+                </label>
+               
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  name="algorithm" value="merge_sort">
+                <label class="form-check-label">
+                  MERGE SORT
+                </label>
+                
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  name="algorithm" value="quick_sort">
+                <label class="form-check-label">
+                  QUICK SORT
+                </label>
+                
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  name="algorithm" value="median_quicksort">
+                <label class="form-check-label">
+                  QUICK SORT USING 3 MEDIANS
+                </label>
+                
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  name="algorithm" value="heap_sort">
+                <label class="form-check-label">
+                  HEAP SORT
+                </label>
+                
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  name="algorithm" value="all_alg">
+                <label class="form-check-label">
+                 COMPARE ALL AGORITHMS
+                </label>
+                
+              </div>
+    
+              
+            </div>
+            <div class="col-lg-6">
+              <div id="dvtext" >
+                Number of experiments
+                <input type="number" id="txtBox" name="noOfExp"/>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-outline-light btn-lg ml-2.5">START SORTING</button> 
+            </div>
+          </div>
+                
+      </form>
+      </div>     
+      
+    </div>
+
+      
+
+{% endblock %}

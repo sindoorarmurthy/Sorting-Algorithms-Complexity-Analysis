@@ -1,0 +1,72 @@
+{% extends "newbase.html" %}
+
+{% block samecontent %}Display Graph{% endblock %}
+
+
+{% block navbarContent %}
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <form action="/selectDisplay" method="post">
+            <a class="nav-link active" aria-current="page" href="/backToAlgo">SELECT ALGORITHM</a>
+        </form>
+      </li>
+    </ul>
+  </div>
+
+{% endblock %}
+    
+{% block pageContent %}
+<div >
+    <img class = "blurImage" src="{{url_for('static', filename='images/graphbh2.jpeg') }}"  style="width:100%;height:100%;"/>
+</div>
+<div class="img-container">
+    {% if name == 'bubble_sort' %} 
+    
+        <img src="{{url_for('static', filename='graphs/bubble.png') }}" alt='BUBBLE SORT GRAPH' style="width:720px;height:540px;"/>
+    
+    
+    {% elif name == 'insertion_sort' %} 
+    
+        <img src="{{url_for('static', filename='graphs/insertion.png') }}" alt='INSERTION SORT GRAPH' style="width:720px;height:540px;"/>
+    
+    
+    {% elif name == 'selection_sort' %} 
+    
+        <img src="{{url_for('static', filename='graphs/selection.png') }}" alt='SELECTION SORT GRAPH' style="width:720px;height:540px;"/>
+    
+    
+    {% elif name == 'merge_sort' %} 
+    
+        <img src="{{url_for('static', filename='graphs/merge.png') }}" alt='MERGE SORT GRAPH' style="width:720px;height:540px;"/>
+    
+    
+    {% elif name == 'quick_sort' %} 
+    
+        <img src="{{url_for('static', filename='graphs/quick.png') }}" alt='QUICK SORT GRAPH' style="width:720px;height:540px;"/>
+    
+    
+    {% elif name == 'median_quicksort' %} 
+    
+        <img src="{{url_for('static', filename='graphs/median.png') }}" alt='MEDIAN QUICK SORT GRAPH' style="width:720px;height:540px;"/>
+    
+    
+    {% elif name == 'heap_sort' %} 
+    
+        <img src="{{url_for('static', filename='graphs/heap.png') }}" alt='HEAP SORT GRAPH' style="width:720px;height:540px;"/>
+    
+    
+    {% elif name == 'all_alg' %} 
+   
+        <img src="{{url_for('static', filename='graphs/bestSorting.png') }}" alt='ALL SORT GRAPH' style="width:720px;height:540px;"/>
+    
+    
+    {% endif %} 
+
+</div>
+
+{% endblock %}
+
+
+
+
